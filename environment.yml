@@ -1,0 +1,27 @@
+name: ai-engine
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+
+  # Core
+  - numpy
+  - pandas
+  - scikit-learn
+  
+  # pytorch related things
+  - pytorch
+  - torchaudio
+  - torchvision
+  - cpuonly
+
+  # API
+  - fastapi
+  
+  - pip 
+  - pip: 
+    - python-dotenv
+

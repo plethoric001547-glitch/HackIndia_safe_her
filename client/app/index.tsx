@@ -32,15 +32,17 @@ export default function Index() {
     return "http://localhost:8080"; // web + physical device
   };
  
-  useEffect(() => {
-    router.push("/(tabs)/map")
-  }, []);
+  // useEffect(() => {
+  //   router.push("/(tabs)/map")
+  // }, []);
 
   const handleButtonPress = async () => {
     const credentials = { email, password };
 
     try {
-      const BASE_URL = "http://localhost:8080";
+      const BASE_URL = "https://winfred-bearable-winterishly.ngrok-free.dev";
+      console.log("request ongoing")
+      console.log("request ongoing")
       const response = await axios.post(`${BASE_URL}/auth/login`, credentials, {
         headers: { "Content-Type": "application/json" },
       });
@@ -55,17 +57,20 @@ export default function Index() {
 
       const data = JSON.parse(jsonMatch[0]);
 
+      console.log(data)
+      console.log("data")
+
       SecureStore.setItem("session_token", data.token)
 
       router.replace("/(tabs)/map");
-      if (1 == 1) {
+      if (data && data.id && data.token) {
         console.log("Navigating to map...");
       }else {
         Alert.alert("Warning", "email or password invalid")
       }
 
     } catch (error: any) {
-      console.log("Login error status:", error);
+      console.log("Login error status:", JSON.stringify(error));
       console.log("Login error data:", JSON.stringify(error?.response?.data));
     }
   };

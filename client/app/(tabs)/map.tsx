@@ -14,16 +14,58 @@ export default function Map() {
   const [location, setLocation] =
     React.useState<Location.LocationObject | null>(null);
   const [unSafePoint, setUnsafePoint] = React.useState<unSafePoint[]>([
-  { latitude: 28.598130238854658, longitude: 77.39189967513084, weight: 1 },
-  { latitude: 28.59839046335287, longitude: 77.39106617867947, weight: 1 },
-  { latitude: 28.59947168335507, longitude: 77.39151075482368, weight: 1 },
-  { latitude: 28.599179080945664, longitude: 77.39158485084772, weight: 1 },
-  { latitude: 28.5985, longitude: 77.3912, weight: 2 },
-  { latitude: 28.5992, longitude: 77.3918, weight: 1 },
-  { latitude: 28.5978, longitude: 77.3925, weight: 3 },
-  { latitude: 28.5969, longitude: 77.3908, weight: 1 },
-  { latitude: 28.6001, longitude: 77.3921, weight: 2 },
-  { latitude: 28.5975, longitude: 77.3915, weight: 1 },
+  { latitude: 28.47674989556479, longitude: 77.5016687437892, weight: 1 },
+  { latitude: 28.47674989556479, longitude: 77.5016687437892, weight: 1 },
+
+  { latitude: 28.48709375534753, longitude: 77.49297436326742, weight: 1 },
+
+  { latitude: 28.532757586356368, longitude: 77.43741173297167, weight: 1 },
+
+  { latitude: 28.470910619352384, longitude: 77.46224496513605, weight: 1 },
+
+  { latitude: 28.469876415203885, longitude: 77.50207241624594, weight: 1 },
+  { latitude: 28.469876415203885, longitude: 77.50207241624594, weight: 1 },
+
+  { latitude: 28.474668623917676, longitude: 77.46364071965218, weight: 1 },
+
+  { latitude: 28.472717578708096, longitude: 77.4640990421176, weight: 1 },
+  { latitude: 28.472717578708096, longitude: 77.4640990421176, weight: 1 },
+
+  { latitude: 28.48709375534753, longitude: 77.49297436326742, weight: 1 },
+  { latitude: 28.48709375534753, longitude: 77.49297436326742, weight: 1 },
+
+  { latitude: 28.532757586356368, longitude: 77.43741173297167, weight: 1 },
+  { latitude: 28.532757586356368, longitude: 77.43741173297167, weight: 1 },
+  { latitude: 28.532757586356368, longitude: 77.43741173297167, weight: 1 },
+
+  { latitude: 28.39667069021716, longitude: 77.52965155988932, weight: 1 },
+  { latitude: 28.39667069021716, longitude: 77.52965155988932, weight: 1 },
+
+  { latitude: 28.402563906173636, longitude: 77.53503207117319, weight: 1 },
+  { latitude: 28.402563906173636, longitude: 77.53503207117319, weight: 1 },
+  { latitude: 28.402563906173636, longitude: 77.53503207117319, weight: 1 },
+  { latitude: 28.402563906173636, longitude: 77.53503207117319, weight: 1 },
+
+  { latitude: 28.39825270670317, longitude: 77.53301806747913, weight: 1 },
+  { latitude: 28.39825270670317, longitude: 77.53301806747913, weight: 1 },
+  { latitude: 28.39825270670317, longitude: 77.53301806747913, weight: 1 },
+  { latitude: 28.39825270670317, longitude: 77.53301806747913, weight: 1 },
+  { latitude: 28.473734956023204, longitude: 77.48913243412971, weight: 1 },
+  { latitude: 28.473734956023204, longitude: 77.48913243412971, weight: 1 },
+  { latitude: 28.473734956023204, longitude: 77.48913243412971, weight: 1 },
+  { latitude: 28.473734956023204, longitude: 77.48913243412971, weight: 1 },
+
+  { latitude: 28.473803036252736, longitude: 77.48927190899849, weight: 1 },
+  { latitude: 28.473803036252736, longitude: 77.48927190899849, weight: 1 },
+  { latitude: 28.473803036252736, longitude: 77.48927190899849, weight: 1 },
+
+  { latitude: 28.475649143154175, longitude: 77.48967222869396, weight: 1 },
+  { latitude: 28.475649143154175, longitude: 77.48967222869396, weight: 1 },
+  { latitude: 28.475649143154175, longitude: 77.48967222869396, weight: 1 },
+
+  { latitude: 28.46372285333167, longitude: 77.49638479202986, weight: 1 },
+  { latitude: 28.46723088140974, longitude: 77.49936506152153, weight: 1 },
+  { latitude: 28.464670167971637, longitude: 77.49327979981899, weight: 1 }
 ]);
   const [locationStatus, setLocationStatus] = React.useState(false);
 

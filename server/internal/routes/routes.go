@@ -2,7 +2,6 @@ package routes
 
 import (
 	"server/internal/handlers"
-	"server/internal/middlewares"
 	"server/internal/websocket"
 
 	"github.com/gorilla/mux"
@@ -15,12 +14,12 @@ func SetupRoutes(db *gorm.DB) *mux.Router {
 	authHandler := handlers.NewAuthHandler(db)
 
 	/* Subroutes for auth routes */
-	authSubRouter := router.PathPrefix("/auth").Subrouter()
-	authSubRouter.Use(middlewares.CheckUserAuthetic)
+	// authSubRouter := router.PathPrefix("/auth").Subrouter()
+	// authSubRouter.Use(middlewares.CheckUserAuthetic)
 
 	/* Subroutes for api routes */
-	apiSubRoutes := router.PathPrefix("/api").Subrouter()
-	apiSubRoutes.Use(middlewares.CheckUserAuthetic)
+	// apiSubRoutes := router.PathPrefix("/api").Subrouter()
+	// apiSubRoutes.Use(middlewares.CheckUserAuthetic)
 
 	// Register the auth handler for the "/auth" route (example)
 	router.HandleFunc("/auth/login", authHandler.SafeHerLogin).Methods("POST", "OPTIONS")

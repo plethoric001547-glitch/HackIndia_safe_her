@@ -45,7 +45,7 @@ func (h *AuthHandler) SafeHerLogin(writer http.ResponseWriter, request *http.Req
 
 	if result.Error != nil {
 		http.Error(writer, "user not found", http.StatusUnauthorized)
-		log.Fatalln("User not found")
+		log.Println("User not found")
 		return
 	}
 
@@ -111,7 +111,7 @@ func (h *AuthHandler) SafeHerRegister(writer http.ResponseWriter, request *http.
 		return
 	}
 
-	log.Printf(req.Email, req.Password)
+	log.Printf("Email: %s, Password: %s", req.Email, req.Password)
 
 	var hashed_pass string = conversions.HashingService(req.Password)
 
